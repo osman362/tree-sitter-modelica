@@ -1,0 +1,76 @@
+=====
+Hover
+=====
+
+model Equation "A simple linear equation model y = mx"
+  parameter Real m = 1;
+  input Real x;
+  output Real y;
+equation
+  y = m * x;
+end Equation;
+
+---
+
+(stored_definitions
+  (stored_definition
+    (class_definition
+      (class_prefixes)
+      (long_class_specifier
+        (IDENT)
+        (description_string
+          (STRING))
+        (element_list
+          (named_element
+            (component_clause
+              (type_specifier
+                (name
+                  (IDENT)))
+              (component_list
+                (component_declaration
+                  (declaration
+                    (IDENT)
+                    (modification
+                      (expression
+                        (simple_expression
+                          (primary_expression
+                            (literal_expression
+                              (unsigned_integer_literal_expression
+                                (UNSIGNED_INTEGER))))))))))))
+          (named_element
+            (component_clause
+              (type_specifier
+                (name
+                  (IDENT)))
+              (component_list
+                (component_declaration
+                  (declaration
+                    (IDENT))))))
+          (named_element
+            (component_clause
+              (type_specifier
+                (name
+                  (IDENT)))
+              (component_list
+                (component_declaration
+                  (declaration
+                    (IDENT)))))))
+        (equation_section
+          (equation_list
+            (simple_equation
+              (simple_expression
+                (primary_expression
+                  (component_reference
+                    (IDENT))))
+              (expression
+                (simple_expression
+                  (binary_expression
+                    (simple_expression
+                      (primary_expression
+                        (component_reference
+                          (IDENT))))
+                    (simple_expression
+                      (primary_expression
+                        (component_reference
+                          (IDENT))))))))))
+        (IDENT)))))
